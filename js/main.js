@@ -4,6 +4,13 @@
  */
 
 class Libro {
+    /**
+     * 
+     * @param {String} titulo Título del libro
+     * @param {String} autor Autor del libro
+     * @param {String} isbn Número identificador del libro
+     */
+
     constructor(titulo, autor, isbn) {
         this.titulo = titulo;
         this.autor = autor;
@@ -30,6 +37,12 @@ class Libro {
 
 
 class Biblioteca {
+    /**
+     * 
+     * @param {String} nombre Nombre de la biblioteca
+     * @param {Array} libros Array con todos los libros que se agreguen
+     */
+
     constructor(nombre) {
         this.nombre = nombre;
         this.libros = [];
@@ -51,10 +64,6 @@ class Biblioteca {
         } else {
             return 'El libro no está disponible.'
         }
-        // Buscar libro por isbn
-        // Mirar si el libro está prestado o disponible
-        // Si está prestado devolver "error"
-        // Si está disponible, cambiarlo a prestado
     }
 
     devolverLibro (isbn) {
@@ -69,7 +78,6 @@ class Biblioteca {
         this.libros.forEach((libro) => {
             console.log(`${libro.titulo}, ${libro.autor}, ${libro.isbn}, ${libro.getEstado()}`);
         })
-        // Mostrar la información por cada libro
     }
 }
 
